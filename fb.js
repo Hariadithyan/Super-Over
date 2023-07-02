@@ -15,10 +15,8 @@ document.getElementById("strike").onclick=function(){
 
     var r1=Math.floor(Math.random()*100+1);
     var r2=Math.floor(Math.random()*100+1);
-if(count>5){
-    window.location.reload();
-}
-   else if(count==5)
+
+   if(count==5)
    {
     if(play1.p1_count<play2.p2_count){
     document.getElementById("strike").textContent="Match WIN by team MANCHESTER UNITED";
@@ -53,7 +51,7 @@ count++;
 function round(){
     play1.val.forEach((a,b)=>{
         if(a%2==0){
-            p1_round[b].innerHTML="green";
+            p1_round[b].style.backgroundColor="green";
         }
         else
         {
@@ -61,7 +59,7 @@ function round(){
         }
     });
     play2.val.forEach((a,b)=>{
-        if(a%2==0){
+        if(b%2==0){
             p2_round[b].style.backgroundColor="green";
         }
         else
