@@ -57,7 +57,7 @@ count++;
 }
 function round(){
     play1.val.forEach((a,b)=>{
-        if(b%2==0){
+        if(a%2==0){
             console.log("value of p1",b);
             p1_round[b].style.backgroundColor="green";
         }
@@ -68,7 +68,7 @@ function round(){
         }
     });
     play2.val.forEach((a,b)=>{
-        if(b%2==0){
+        if(a%2==0){
             console.log("value of p2",b);
             p2_round[b].style.backgroundColor="green";
         }
